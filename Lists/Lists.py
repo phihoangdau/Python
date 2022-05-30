@@ -28,7 +28,7 @@ strings.append("world")
 names = ["John", "Erica", "Jessica"]
 
 #Run
-second_name = names[1]
+second_name = names[-2]
 
 print(numbers)
 print(strings)
