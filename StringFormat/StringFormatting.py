@@ -8,6 +8,12 @@ print("%s is %d years old" % (name, age))
 mylist = [1, 2, 3]
 print("A list: %s" % mylist)
 
+# get the item in list 
+print("the first item in list %s" % mylist[0])
+
+# change item in list
+mylist[0] = 4
+print(mylist)
 #You will need to write a format string which prints out the data using the following syntax: Hello John Doe. Your current balance is $53.44.
 data = ("John", "Doe", 53.44)
 format_string = "Hello %s %s. Your current balance is $%s."
