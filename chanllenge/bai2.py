@@ -1,26 +1,18 @@
+import requests
 import string
-from bai2function import alphabet
-s = input()
-ns = []
-list_aphalbet = list(string.ascii_lowercase)
 
-for i in s:
-    if i not in list_aphalbet:
-        ns.append(i)
+url = input()
+nl = []
+# get content of the html source code
+x = requests.get(url)
+
+# print the response (the content of the request file)
+list1 = list(x.text)
+
+list_apha = list(string.ascii_lowercase)
+for i in list1:
+    if i not in list_apha:
+        pass
     else:
-        ni = list_aphalbet.index(i)+2
-        if ni >= len(list_aphalbet):
-            ni -= len(list_aphalbet)
-            ns.append(list_aphalbet[ni])
-        else:
-            ns.append(list_aphalbet[ni])
-print("".join(ns))
-print(alphabet("de ghi", 4))
-
-
-        
-        
-        
-
-       
-    
+        nl.append(i)
+print("".join(nl))
