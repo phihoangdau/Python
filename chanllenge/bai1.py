@@ -1,5 +1,4 @@
 import string
-from bai2function import alphabet
 s = input()
 ns = []
 list_aphalbet = list(string.ascii_lowercase)
@@ -15,8 +14,6 @@ for i in s:
         else:
             ns.append(list_aphalbet[ni])
 print("".join(ns))
-print(alphabet("de ghi", 4))
-print(list_aphalbet)
 
         
         
