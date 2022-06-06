@@ -1,16 +1,12 @@
-import requests
+import urllib.request
+import re
 import string
 
-url = input()
 nl = []
-# get content of the html source code
-x = requests.get(url)
-
-# print the response (the content of the request file)
-list1 = list(x.text)
-
 list_apha = list(string.ascii_lowercase)
-for i in list1:
+html = urllib.request.urlopen("http://www.pythonchallenge.com/pc/def/ocr.html").read().decode()
+data = list(re.findall("<!--(.*?)-->", html, re.DOTALL)[-1])
+for i in data:
     if i not in list_apha:
         pass
     else:
