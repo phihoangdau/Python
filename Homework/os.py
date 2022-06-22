@@ -31,7 +31,7 @@ fd = os.open(path, flags, mode)
 # pos is the position in the file with respect to given parameter how: 0(os.SEEK_SET) begin of the file, 1(os.SEEK_CUR) current position, 2(os.SEEK_END) end of the file
 os.lseek(fd, 0, 0)
 str = (os.read(fd, os.path.getsize(fd))).decode()
-print(str)
+err = re.findall("")
 
 
 #Close opened file
