@@ -1,7 +1,4 @@
 #4.1
-from cmath import pi
-
-
 pizzas = ['cheese', 'beef', 'ham']
 for pizza in pizzas:
     print('I like ' + pizza + ' pizza')
